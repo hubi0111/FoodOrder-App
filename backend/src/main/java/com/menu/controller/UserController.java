@@ -1,6 +1,8 @@
 package com.menu.controller;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -43,5 +45,17 @@ public class UserController {
 	@ResponseBody
 	public Object[] authenticate(@RequestBody User user) {
 		return userService.authenticate(user);
+	}
+
+	@PostMapping("/authorize")
+	public boolean authorize(@RequestBody Map<String, Object> user) {
+		Map<String, Object> m = (HashMap<String, Object>) user.get("user");
+		if(m==null) {
+			return false;
+		}
+		User u = new User();
+		u.setType((String) m.get("type"));
+
+		return userService.authorize(u, (String) user.get("role"));
 	}
 }
