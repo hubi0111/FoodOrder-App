@@ -1,6 +1,6 @@
 # Food order Application
 
-This application is a simplified a food ordering system. It provides the functionalities for admin users to add, update, and delete new menu items.
+This application is a simplified a food ordering system. It provides the functionalities for admin users to add, update, and delete new menu items and for customer to order food.
 
 ## Programming Languages and Tools
 
