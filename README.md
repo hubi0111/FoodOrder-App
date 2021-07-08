@@ -7,8 +7,8 @@ This application is a simplified a food ordering system. It provides the functio
 - Maven Spring Boot backend
 - Angular Frontend
 - MySQL Database
-- Eclipse
-- VS Code
+- Eclipse as Back-end IDE
+- VS Code as Front-end IDE
 
 All installation links can be found below.
 
